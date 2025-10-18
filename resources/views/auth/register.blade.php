@@ -54,7 +54,7 @@
 </head>
 <body>
     <div class="container mt-5">
-        <h2 class="text-center mb-4">Join <strong>FashionFusion</strong> Today!</h2>
+        <h2 class="text-center mb-4">Discover <strong>SoulSkin</strong> Today.</h2>
 
         <form action="{{ route('register.submit') }}" method="POST" class="card p-4 mx-auto" style="max-width: 400px;">
             @csrf
