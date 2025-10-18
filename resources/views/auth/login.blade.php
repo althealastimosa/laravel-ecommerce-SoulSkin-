@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+phph<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -29,7 +29,7 @@
 
         .form-control:focus {
             border-color: #4fd1c5;
-            box-shadow: 0 0 5px rgba(79, 209, 197, 0.5);
+            box-shadow: 0 0 5px rgba(94, 215, 203, 0.5);
         }
 
         .btn-dark {
@@ -54,7 +54,8 @@
 </head>
 <body>
     <div class="container mt-5">
-        <h2 class="text-center mb-4">Welcome Back to <strong>SoulSkin</strong></h2>
+        <h2 class="text-center mb-4">Welcome Back to <strong>SoulSkingit add .
+</strong></h2>
 
         <form action="{{ route('login.submit') }}" method="POST" class="card p-4 mx-auto" style="max-width: 400px;">
             @csrf
