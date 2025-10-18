@@ -2,29 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login | FashionFusion</title>
+    <title>Login | SoulSkin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #e0f7f1; /* soft pastel mint */
+            background-color: #e0f7f1; 
             font-family: 'Segoe UI', sans-serif;
         }
 
         .card {
-            background-color: #f0fcfa; /* very light mint form */
+            background-color: #f0fcfa; 
             border-radius: 15px;
             border: none;
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
 
         h2 {
-            color: #2ca58d; /* darker mint for heading */
+            color: #2ca58d; 
         }
 
         .form-control {
             border-radius: 10px;
-            border: 1px solid #a0e5d8; /* pastel border */
-            background-color: #e0faf4; /* input background */
+            border: 1px solid #a0e5d8; 
+            background-color: #e0faf4; 
         }
 
         .form-control:focus {
@@ -33,13 +33,13 @@
         }
 
         .btn-dark {
-            background-color: #4fd1c5; /* pastel teal button */
+            background-color: #4fd1c5; 
             border: none;
             border-radius: 10px;
         }
 
         .btn-dark:hover {
-            background-color: #38b59f; /* slightly darker teal */
+            background-color: #38b59f; 
         }
 
         a {
@@ -54,7 +54,7 @@
 </head>
 <body>
     <div class="container mt-5">
-        <h2 class="text-center mb-4">Welcome Back to <strong>FashionFusion</strong></h2>
+        <h2 class="text-center mb-4">Welcome Back to <strong>SoulSkin</strong></h2>
 
         <form action="{{ route('login.submit') }}" method="POST" class="card p-4 mx-auto" style="max-width: 400px;">
             @csrf

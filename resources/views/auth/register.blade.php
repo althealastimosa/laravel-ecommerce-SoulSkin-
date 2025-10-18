@@ -2,29 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Register | FashionFusion</title>
+    <title>Register | SoulSkin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #e0f7f1; /* pastel mint background */
+            background-color: #e0f7f1; 
             font-family: 'Segoe UI', sans-serif;
         }
 
         .card {
-            background-color: #f0fcfa; /* very light mint for form */
+            background-color: #f0fcfa; 
             border-radius: 15px;
             border: none;
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
 
         h2 {
-            color: #2ca58d; /* darker mint/teal for headings */
+            color: #2ca58d; 
         }
 
         .form-control {
             border-radius: 10px;
-            border: 1px solid #a0e5d8; /* pastel border */
-            background-color: #e0faf4; /* input background */
+            border: 1px solid #a0e5d8; 
+            background-color: #e0faf4; 
         }
 
         .form-control:focus {
@@ -33,13 +33,13 @@
         }
 
         .btn-success {
-            background-color: #4fd1c5; /* pastel teal button */
+            background-color: #4fd1c5; 
             border: none;
             border-radius: 10px;
         }
 
         .btn-success:hover {
-            background-color: #38b59f; /* slightly darker teal */
+            background-color: #38b59f; 
         }
 
         a {
