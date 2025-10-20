@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Register | SoulSkin </title>
+    <title>Register | SoulSkin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -50,6 +50,10 @@
         a:hover {
             color: #1e7862;
         }
+
+        .alert {
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
@@ -58,21 +62,40 @@
 
         <form action="{{ route('register.submit') }}" method="POST" class="card p-4 mx-auto" style="max-width: 400px;">
             @csrf
+
+            @if (session('success'))
+                <div class="alert alert-success text-center">{{ session('success') }}</div>
+            @endif
+
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul class="mb-0">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
+            {{-- Full Name --}}
             <div class="mb-3">
                 <label class="form-label">Full Name</label>
-                <input type="text" name="name" class="form-control"  required>
+                <input type="text" name="name" class="form-control" value="{{ old('name') }}" required>
             </div>
 
+            {{-- Email --}}
             <div class="mb-3">
                 <label class="form-label">Email Address</label>
-                <input type="email" name="email" class="form-control"  required>
+                <input type="email" name="email" class="form-control" value="{{ old('email') }}" required>
             </div>
 
+            {{-- Password --}}
             <div class="mb-3">
                 <label class="form-label">Password</label>
-                <input type="password" name="password" class="form-control"  required>
+                <input type="password" name="password" class="form-control" required>
             </div>
 
+            {{-- Submit --}}
             <button type="submit" class="btn btn-success w-100">Create Account</button>
 
             <p class="text-center mt-3">

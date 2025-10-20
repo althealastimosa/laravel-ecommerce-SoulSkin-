@@ -1,26 +1,22 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CustomerAuthController;
 
 // Redirect root to login page
 Route::get('/', function () {
     return redirect()->route('login');
 });
 
-// Login routes
-Route::get('/login', function () {
-    return view('auth.login');
-})->name('login');
-
-Route::post('/login', function () {
-    return "Login form submitted!";
-})->name('login.submit');
-
 // Registration routes
-Route::get('/register', function () {
-    return view('auth.register');
-})->name('register');
+Route::get('/register', [CustomerAuthController::class, 'showRegister'])->name('register');
+Route::post('/register', [CustomerAuthController::class, 'registerSubmit'])->name('register.submit');
 
-Route::post('/register', function () {
-    return "Registration form submitted!";
-})->name('register.submit');
+// Login routes
+Route::get('/login', [CustomerAuthController::class, 'showLogin'])->name('login');
+Route::post('/login', [CustomerAuthController::class, 'loginSubmit'])->name('login.submit');
+
+// Home page (after login)
+Route::get('/home', function () {
+    return view('home');
+})->name('home');
